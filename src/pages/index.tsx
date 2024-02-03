@@ -10,6 +10,7 @@ import {
   Typography,
   useScrollTrigger,
 } from "@mui/material";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { CardActionArea } from "gatsby-theme-material-ui";
@@ -19,7 +20,7 @@ const HeadCard = ({ name, Img }) => (
   <Link to="/test">
     <Card sx={{ mb: 2 }}>
       <CardActionArea placeholder={undefined}>
-        <Box sx={{ height: 120, position: "relative", width: "100%" }}>
+        <Box sx={{ position: "relative", width: "100%" }}>
           <Box
             sx={{
               display: "flex",
@@ -49,7 +50,10 @@ const IndexPage = () => {
   console.log(a);
   return (
     <>
-      <AppBar color={!a ? "transparent" : "default"} elevation={0}>
+      <AppBar
+        color={!a ? "transparent" : "default"}
+        elevation={a ? undefined : 0}
+      >
         <Toolbar>
           <IconButton sx={{ color: !a ? "white" : "black" }} disableRipple>
             <Menu />
@@ -138,6 +142,48 @@ const IndexPage = () => {
           Tsarevo has incredible places for you all around the municipality. Our
           fantastic destinations are ready for your visit.
         </Typography>
+        <Grid2 container spacing={2}>
+          <Grid2 xs={6}>
+            {" "}
+            <HeadCard
+              name="Sinemorets"
+              Img={
+                <StaticImage
+                  src="./../veleka-sinemorec-3.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  transformOptions={{
+                    duotone: {
+                      shadow: "#222222",
+                      highlight: "#222222",
+                      opacity: 20,
+                    },
+                  }}
+                />
+              }
+            />
+          </Grid2>
+          <Grid2 xs={6}>
+            {" "}
+            <HeadCard
+              name="Sinemorets"
+              Img={
+                <StaticImage
+                  src="./../veleka-sinemorec-3.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  transformOptions={{
+                    duotone: {
+                      shadow: "#222222",
+                      highlight: "#222222",
+                      opacity: 20,
+                    },
+                  }}
+                />
+              }
+            />
+          </Grid2>
+        </Grid2>
         <HeadCard
           name="Lozenets"
           Img={
@@ -189,23 +235,7 @@ const IndexPage = () => {
             />
           }
         />
-        <HeadCard
-          name="Sinemorets"
-          Img={
-            <StaticImage
-              src="https://images.squarespace-cdn.com/content/v1/583b0a01c534a5462eed4e3c/1620587795485-5U7TBBP2HKR6RNR2TZRL/DJI_0680.jpg?format=2500w"
-              alt="asd"
-              layout="fullWidth"
-              transformOptions={{
-                duotone: {
-                  shadow: "#222222",
-                  highlight: "#222222",
-                  opacity: 20,
-                },
-              }}
-            />
-          }
-        />
+
         <HeadCard
           name="Ahtopol"
           Img={
