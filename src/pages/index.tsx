@@ -2,6 +2,7 @@ import { Language, Menu } from "@mui/icons-material";
 import {
   AppBar,
   Box,
+  Button,
   Card,
   Container,
   IconButton,
@@ -44,22 +45,24 @@ const HeadCard = ({ name, Img }) => (
 
 const IndexPage = () => (
   <>
-    <AppBar color="default">
+    <AppBar color="transparent" elevation={0}>
       <Toolbar>
-        <IconButton sx={{ color: "black" }}>
+        <IconButton sx={{ color: "white" }} disableRipple>
           <Menu />
         </IconButton>
-        <Typography variant="h6">Visit Tsarevo</Typography>
+        <Typography variant="h6" color="white">
+          Visit Tsarevo
+        </Typography>
         <Box flex={1} />
-        <IconButton sx={{ color: "black" }}>
-          <Language />
-        </IconButton>
+        <Button sx={{ color: "white" }} endIcon={<Language />} disableRipple>
+          EN
+        </Button>
       </Toolbar>
     </AppBar>
-    <Toolbar></Toolbar>
+    {/* <Toolbar></Toolbar> */}
     <Box sx={{ position: "relative" }}>
       <StaticImage
-        src="https://www.tsarevo.info/files/images/2011/09/selo-lozenets.jpg"
+        src="./../test-2-cover.jpg"
         alt="asd"
         layout="fullWidth"
         transformOptions={{
@@ -74,47 +77,64 @@ const IndexPage = () => (
         sx={{
           position: "absolute",
           left: 0,
-          top: 0,
-          height: "100%",
-          width: "100%",
+          bottom: 10,
+          // height: "100%",
+          // width: "100%",
           display: "flex",
           alignItems: "center",
           paddingLeft: 2,
           paddingRight: 2,
-          flexDirection: "column",
+          flexDirection: "row-reverse",
           justifyContent: "center",
         }}
       >
-        <StaticImage
+        {/* <StaticImage
           src="http://tsarevo.org/components/com_k2/images/placeholder/category.png"
           alt=""
           layout="fixed"
-          width={80}
-        />
-        <Typography
-          sx={{
-            textShadow: "black 1px 0 20px",
-          }}
-          variant="h4"
-          color="white"
-          textAlign={"center"}
-        >
-          Enjoy the beauty of Tsarevo Municipality
-        </Typography>
+          width={50}
+        /> */}
+        <Box>
+          <Typography
+            sx={{
+              textShadow: "black 1px 0 20px",
+            }}
+            variant="h3"
+            color="white"
+            gutterBottom
+            // textAlign={"center"}
+          >
+            Enjoy the beauty of Tsarevo
+          </Typography>
+          <Typography paragraph variant="body1" gutterBottom color="white">
+            Tsarevo has incredible places for you all around the municipality.
+            Our fantastic destinations are ready for your visit.
+          </Typography>
+        </Box>
       </Box>
     </Box>
     <Container sx={{ mt: 2 }}>
       {/* <Typography variant="h6" gutterBottom>
         Visit Tsarevo
       </Typography> */}
-      <Typography variant="h3" gutterBottom>
-        Destinations
+      <Typography
+        variant="h4"
+        gutterBottom
+        fontWeight={"bolder"}
+        textAlign={"center"}
+        sx={{ mt: 4 }}
+      >
+        Amazing places to visit
+      </Typography>
+      <Typography paragraph textAlign={"center"} variant="body2">
+        Tsarevo has incredible places for you all around the municipality. Our
+        fantastic destinations are ready for your visit.
       </Typography>
       <HeadCard
         name="Lozenets"
         Img={
           <StaticImage
-            src="https://www.tsarevo.info/files/images/2011/09/selo-lozenets.jpg"
+            src="https://scontent.fsof9-1.fna.fbcdn.net/v/t39.30808-6/316115000_501521048678043_675780825677286875_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=783fdb&_nc_ohc=0QJWnlMFYucAX_3ujVM&_nc_ht=scontent.fsof9-1.fna&oh=00_AfDd4iTo9gYGKYMflSrZY9xF7o_9eoiiXXAVa_Nsy3Tang&oe=65BF2B15"
             alt="asd"
             layout="fullWidth"
             transformOptions={{
