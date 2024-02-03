@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Card,
+  CardContent,
   Container,
   IconButton,
   Toolbar,
@@ -16,33 +17,22 @@ import { StaticImage } from "gatsby-plugin-image";
 import { CardActionArea } from "gatsby-theme-material-ui";
 import React from "react";
 
-const HeadCard = ({ name, Img }) => (
-  <Link to="/test">
-    <Card sx={{ mb: 2 }}>
-      <CardActionArea placeholder={undefined}>
-        <Box sx={{ position: "relative", width: "100%" }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              zIndex: 2,
-            }}
-          >
-            <Typography variant="h4" sx={{ color: "primary.contrastText" }}>
-              {name}
-            </Typography>
-          </Box>
-          {Img}
-        </Box>
+const HeadCard = ({ name, Img, text }) => (
+  <Box sx={{ mb: 2 }}>
+    <Card elevation={0}>
+      <CardActionArea placeholder={undefined} to="/">
+        <Box>{Img}</Box>
       </CardActionArea>
     </Card>
-  </Link>
+    <Box mt={1}>
+      <Typography variant="h6" fontWeight={"bolder"} gutterBottom>
+        {name}
+      </Typography>
+      <Typography paragraph variant="body2">
+        {text}
+      </Typography>
+    </Box>
+  </Box>
 );
 
 const IndexPage = () => {
@@ -142,11 +132,28 @@ const IndexPage = () => {
           Tsarevo has incredible places for you all around the municipality. Our
           fantastic destinations are ready for your visit.
         </Typography>
-        <Grid2 container spacing={2}>
+        <iframe
+          width="100%"
+          height="180"
+          src="https://www.youtube.com/embed/7ogG3oFzDUE?si=2kADtWTMIMzJVmNs&amp;controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <Typography
+          variant="h4"
+          gutterBottom
+          fontWeight={"bolder"}
+          sx={{ mt: 2 }}
+        >
+          Destinations
+        </Typography>
+        <Grid2 container spacing={1}>
           <Grid2 xs={6}>
-            {" "}
             <HeadCard
               name="Sinemorets"
+              text="A timeless jewel on the coast."
               Img={
                 <StaticImage
                   src="./../veleka-sinemorec-3.jpg"
@@ -164,12 +171,12 @@ const IndexPage = () => {
             />
           </Grid2>
           <Grid2 xs={6}>
-            {" "}
             <HeadCard
-              name="Sinemorets"
+              name="Tsarevo"
+              text="Coastal charm meets timeless tranquility."
               Img={
                 <StaticImage
-                  src="./../veleka-sinemorec-3.jpg"
+                  src="./../carevo-drone-1.jpg"
                   alt="asd"
                   layout="fullWidth"
                   transformOptions={{
@@ -184,7 +191,7 @@ const IndexPage = () => {
             />
           </Grid2>
         </Grid2>
-        <HeadCard
+        {/* <HeadCard
           name="Lozenets"
           Img={
             <StaticImage
@@ -320,7 +327,7 @@ const IndexPage = () => {
               }}
             />
           }
-        />
+        /> */}
       </Container>
     </>
   );
