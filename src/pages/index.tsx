@@ -20,7 +20,7 @@ import React from "react";
 const HeadCard = ({ name, Img, text }) => (
   <Box sx={{ mb: 2 }}>
     <Card elevation={0}>
-      <CardActionArea placeholder={undefined} to="/">
+      <CardActionArea placeholder={undefined} to="/test">
         <Box>{Img}</Box>
       </CardActionArea>
     </Card>
@@ -108,7 +108,15 @@ const IndexPage = () => {
             >
               Enjoy the beauty of Tsarevo
             </Typography>
-            <Typography paragraph variant="body1" gutterBottom color="white">
+            <Typography
+              paragraph
+              variant="body1"
+              gutterBottom
+              color="white"
+              sx={{
+                textShadow: "black 1px 0 20px",
+              }}
+            >
               Tsarevo has incredible places for you all around the municipality.
               Our fantastic destinations are ready for your visit.
             </Typography>
@@ -153,7 +161,7 @@ const IndexPage = () => {
           <Grid2 xs={6}>
             <HeadCard
               name="Sinemorets"
-              text="A timeless jewel on the coast."
+              text="A timeless jewel on the coast"
               Img={
                 <StaticImage
                   src="./../veleka-sinemorec-3.jpg"
@@ -173,7 +181,7 @@ const IndexPage = () => {
           <Grid2 xs={6}>
             <HeadCard
               name="Tsarevo"
-              text="Coastal charm meets timeless tranquility."
+              text="Coastal charm meets timeless tranquility"
               Img={
                 <StaticImage
                   src="./../carevo-drone-1.jpg"
@@ -190,7 +198,50 @@ const IndexPage = () => {
               }
             />
           </Grid2>
+          <Grid2 xs={6}>
+            <HeadCard
+              name="Lozenets"
+              text="Pristine beach, vibrant nightlife by dusk"
+              Img={
+                <StaticImage
+                  src="./../lozenec-long.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  transformOptions={{
+                    duotone: {
+                      shadow: "#222222",
+                      highlight: "#222222",
+                      opacity: 20,
+                    },
+                  }}
+                />
+              }
+            />
+          </Grid2>
+          <Grid2 xs={6}>
+            <HeadCard
+              name="Ahtopol"
+              text="Where golden sunsets meet crystal waters"
+              Img={
+                <StaticImage
+                  src="./../ahtopol-boat.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  transformOptions={{
+                    duotone: {
+                      shadow: "#222222",
+                      highlight: "#222222",
+                      opacity: 20,
+                    },
+                  }}
+                />
+              }
+            />
+          </Grid2>
         </Grid2>
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 1, mb: 5 }}>
+          <Button variant="outlined">All destiantions</Button>
+        </Box>
         {/* <HeadCard
           name="Lozenets"
           Img={
