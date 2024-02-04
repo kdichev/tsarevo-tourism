@@ -18,7 +18,7 @@ import { CardActionArea } from "gatsby-theme-material-ui";
 import React from "react";
 
 const HeadCard = ({ name, Img, text }) => (
-  <Box sx={{ mb: 2 }}>
+  <Box>
     <Card elevation={0}>
       <CardActionArea placeholder={undefined} to="/test">
         <Box>{Img}</Box>
@@ -28,7 +28,7 @@ const HeadCard = ({ name, Img, text }) => (
       <Typography variant="h6" fontWeight={"bolder"} gutterBottom>
         {name}
       </Typography>
-      <Typography paragraph variant="body2">
+      <Typography gutterBottom variant="body2">
         {text}
       </Typography>
     </Box>
@@ -37,7 +37,7 @@ const HeadCard = ({ name, Img, text }) => (
 
 const IndexPage = () => {
   const a = useScrollTrigger();
-  console.log(a);
+
   return (
     <>
       <AppBar
@@ -106,7 +106,7 @@ const IndexPage = () => {
               gutterBottom
               // textAlign={"center"}
             >
-              Enjoy the beauty of Tsarevo
+              Enjoy the beauty of Tsarevo Municipality
             </Typography>
             <Typography
               paragraph
@@ -158,7 +158,7 @@ const IndexPage = () => {
           Destinations
         </Typography>
         <Grid2 container spacing={1}>
-          <Grid2 xs={6}>
+          <Grid2 xs={6} md={2}>
             <HeadCard
               name="Sinemorets"
               text="A timeless jewel on the coast"
@@ -178,7 +178,7 @@ const IndexPage = () => {
               }
             />
           </Grid2>
-          <Grid2 xs={6}>
+          <Grid2 xs={6} md={2}>
             <HeadCard
               name="Tsarevo"
               text="Coastal charm meets timeless tranquility"
@@ -198,7 +198,7 @@ const IndexPage = () => {
               }
             />
           </Grid2>
-          <Grid2 xs={6}>
+          <Grid2 xs={6} md={2}>
             <HeadCard
               name="Lozenets"
               text="Pristine beach, vibrant nightlife by dusk"
@@ -218,13 +218,53 @@ const IndexPage = () => {
               }
             />
           </Grid2>
-          <Grid2 xs={6}>
+          <Grid2 xs={6} md={2}>
             <HeadCard
               name="Ahtopol"
               text="Where golden sunsets meet crystal waters"
               Img={
                 <StaticImage
                   src="./../ahtopol-boat.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  transformOptions={{
+                    duotone: {
+                      shadow: "#222222",
+                      highlight: "#222222",
+                      opacity: 20,
+                    },
+                  }}
+                />
+              }
+            />
+          </Grid2>
+          <Grid2 xs={6} md={2}>
+            <HeadCard
+              name="Varvara"
+              text="Where golden sunsets meet crystal waters"
+              Img={
+                <StaticImage
+                  src="./../varvara-test.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  transformOptions={{
+                    duotone: {
+                      shadow: "#222222",
+                      highlight: "#222222",
+                      opacity: 20,
+                    },
+                  }}
+                />
+              }
+            />
+          </Grid2>
+          <Grid2 xs={6} md={2}>
+            <HeadCard
+              name="Rezovo"
+              text="Where golden sunsets meet crystal waters"
+              Img={
+                <StaticImage
+                  src="./rezovo.jpg"
                   alt="asd"
                   layout="fullWidth"
                   transformOptions={{
