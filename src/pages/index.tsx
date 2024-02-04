@@ -64,7 +64,20 @@ const IndexPage = () => {
         </Toolbar>
       </AppBar>
       <Box sx={{ position: "relative" }}>
-        <StaticImage src="./../test-2-cover.jpg" alt="asd" layout="fullWidth" />
+        <Box sx={{ display: { xs: "block", md: "none" } }}>
+          <StaticImage
+            src="./../test-2-cover.jpg"
+            alt="asd"
+            layout="fullWidth"
+          />
+        </Box>
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
+          <StaticImage
+            src="./../hero-plaj-3.jpg"
+            alt="asd"
+            layout="fullWidth"
+          />
+        </Box>
         <Box
           sx={{
             position: "absolute",
@@ -118,15 +131,7 @@ const IndexPage = () => {
           Tsarevo has incredible places for you all around the municipality. Our
           fantastic destinations are ready for your visit.
         </Typography>
-        <iframe
-          width="100%"
-          height="180"
-          src="https://www.youtube.com/embed/7ogG3oFzDUE?si=2kADtWTMIMzJVmNs&amp;controls=0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+
         <Typography
           variant="h4"
           gutterBottom
@@ -311,6 +316,101 @@ const IndexPage = () => {
         <Box sx={{ display: "flex", justifyContent: "center", mt: 1, mb: 5 }}>
           <Button variant="outlined">All beaches</Button>
         </Box>
+
+        <Typography
+          variant="h4"
+          gutterBottom
+          fontWeight={"bolder"}
+          sx={{ mt: 2 }}
+        >
+          What to do
+        </Typography>
+        <Grid2 container spacing={3}>
+          <Grid2 xs={12} md={4}>
+            <HeadCard
+              name="Sun and beach"
+              text="Discover the ultimate beach getaway where endless sunshine, crystal-clear waters, and golden sands invite you to elax, play, and create unforgettable memories"
+              Img={
+                <StaticImage
+                  src="https://www.tsarevo.info/files/images/2012/06/golemiyat-plazh-v-lozenets-01.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  style={{ height: 190 }}
+                />
+              }
+            />
+          </Grid2>
+          <Grid2 xs={12} md={4}>
+            <HeadCard
+              name="Hiking"
+              text="Explore the breathtaking landscapes of our area on foot and immerse yourself in the beauty of nature through our premier hiking tourism adventures"
+              Img={
+                <StaticImage
+                  src="https://bulgaria-mt.marlenablacksea.eu/novini/43.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  style={{ height: 190 }}
+                />
+              }
+            />
+          </Grid2>
+          <Grid2 xs={12} md={4}>
+            <HeadCard
+              name="Biking"
+              text="Experience the thrill of biking Strandzha area, where every pedal brings a new adventure amidst breathtaking landscapes."
+              Img={
+                <StaticImage
+                  src="https://aceraft.com/wp-content/uploads/2019/05/new-river-gorge-guided-mountain-biking-9-2500x1634.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  style={{ height: 190 }}
+                />
+              }
+            />
+          </Grid2>
+          <Grid2 xs={12} md={4}>
+            <HeadCard
+              name="Sailing"
+              text="Explore the breathtaking beauty of our coastlines and experience the thrill of the open sea with our unforgettable sailing abilities"
+              Img={
+                <StaticImage
+                  src="https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-6/370567963_10227620904125812_3090857089712290358_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c42490&_nc_ohc=MNco6o5Y-s0AX-CCJHA&_nc_ht=scontent.fsof8-1.fna&oh=00_AfBTaemZ_M76_EREJKhrnXdkJSKvXcHj-8-uSrljv0-XOQ&oe=65C552A1"
+                  alt="asd"
+                  layout="fullWidth"
+                  style={{ height: 190 }}
+                />
+              }
+            />
+          </Grid2>
+          <Grid2 xs={12} md={4}>
+            <HeadCard
+              name="Fishing"
+              text="Experience the thrill of sea fishing tourism, where every cast in our pristine waters offers a chance to reel in the catch of a lifetime"
+              Img={
+                <StaticImage
+                  src="https://www.marinemax.com/-/media/images/marinemax/callouts/new-to-boating-manual-callout/offshore-fishing-boat-outrage-04092020.jpg?h=2662&w=4000&la=en&hash=0AA490BAB688C0974C192FDB7570CD49"
+                  alt="asd"
+                  layout="fullWidth"
+                  style={{ height: 190 }}
+                />
+              }
+            />
+          </Grid2>
+          <Grid2 xs={12} md={4}>
+            <HeadCard
+              name="Surfing"
+              text="Experience the thrill of riding the waves in our area, where endless surf and stunning coastlines promise the ultimate surfing adventure"
+              Img={
+                <StaticImage
+                  src="https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-6/368011155_10227499037879232_77738777917131161_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c42490&_nc_ohc=WJQh_7kwIL4AX_QqaSI&_nc_ht=scontent.fsof8-1.fna&oh=00_AfAiWFiMUt6MQabU0jQSf3-C8pvialG0ieiv_zyykHi7Uw&oe=65C3D1DF"
+                  alt="asd"
+                  layout="fullWidth"
+                  style={{ height: 190 }}
+                />
+              }
+            />
+          </Grid2>
+        </Grid2>
       </Container>
     </>
   );
