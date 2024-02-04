@@ -276,7 +276,7 @@ const IndexPage = () => {
               text="Discover the hidden gem of the Black Sea, Arapya Beach, where pristine sands meet crystal-clear waters"
               Img={
                 <StaticImage
-                  src="https://hotelmap.bg/uploads/images/gallery/ab1d2f8e309f4a9185dcf6990c1baaf6arapia_beach-2.jpg"
+                  src="https://bookvila.bg/img/210616033443.jpg"
                   alt="asd"
                   layout="fullWidth"
                   style={{ height: 190 }}
