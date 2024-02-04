@@ -36,7 +36,7 @@ const HeadCard = ({ name, Img, text }) => (
 );
 
 const IndexPage = () => {
-  const a = useScrollTrigger();
+  const a = useScrollTrigger({ disableHysteresis: true, threshold: 0 });
 
   return (
     <>
