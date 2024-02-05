@@ -4,7 +4,6 @@ import {
   Box,
   Button,
   Card,
-  CardContent,
   Container,
   IconButton,
   Toolbar,
@@ -12,12 +11,10 @@ import {
   useScrollTrigger,
 } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { CardActionArea } from "gatsby-theme-material-ui";
 import React from "react";
 
-import SwipeableViews from "react-swipeable-views";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -29,9 +26,16 @@ const settings = {
   slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
+
   nextArrow: (
     <Box
-      sx={{ position: "absolute", top: "10%", right: "0 !important", mr: 2 }}
+      sx={{
+        position: "absolute",
+        top: "0%",
+        right: "0 !important",
+        mr: 2,
+        mt: 3,
+      }}
     >
       {">"}
     </Box>
@@ -40,9 +44,10 @@ const settings = {
     <Box
       sx={{
         position: "absolute",
-        top: "10%",
+        top: "0%",
         left: "0 !important",
         ml: 2,
+        mt: 3,
         zIndex: 1,
       }}
     >
@@ -66,9 +71,16 @@ const settings1 = {
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
+
   nextArrow: (
     <Box
-      sx={{ position: "absolute", top: "10%", right: "0 !important", mr: 2 }}
+      sx={{
+        position: "absolute",
+        top: "0%",
+        right: "0 !important",
+        mr: 3,
+        mt: 4,
+      }}
     >
       {">"}
     </Box>
@@ -77,9 +89,10 @@ const settings1 = {
     <Box
       sx={{
         position: "absolute",
-        top: "10%",
+        top: "0%",
         left: "0 !important",
-        ml: 2,
+        ml: 3,
+        mt: 4,
         zIndex: 1,
       }}
     >
@@ -209,7 +222,6 @@ const IndexPage = () => {
           Tsarevo has incredible places for you all around the municipality. Our
           fantastic destinations are ready for your visit.
         </Typography>
-
         <Typography
           variant="h4"
           gutterBottom
