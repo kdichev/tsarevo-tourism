@@ -142,12 +142,22 @@ const IndexPage = () => {
             <Menu />
           </IconButton>
           <Box flex={1} />
-          <StaticImage
-            src="./../logo-visit-tsarevo.png"
-            layout="fixed"
-            width={225}
-            alt="asd"
-          />
+          <Box sx={{ display: a ? "none" : "block" }}>
+            <StaticImage
+              src="./../logo-visit-tsarevo.png"
+              layout="fixed"
+              width={225}
+              alt="asd"
+            />
+          </Box>
+          <Box sx={{ display: !a ? "none" : "block" }}>
+            <StaticImage
+              src="./../logo-black.png"
+              layout="fixed"
+              width={225}
+              alt="asd"
+            />
+          </Box>
           <Box flex={1} />
           <Button
             sx={{ color: !a ? "white" : "black" }}
