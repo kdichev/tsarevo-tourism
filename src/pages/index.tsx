@@ -23,7 +23,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const settings = {
-  arrows: true,
   infinite: true,
   speed: 500,
   slidesToShow: 5,
@@ -35,96 +34,10 @@ const settings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        infinite: true,
       },
     },
   ],
 };
-
-function MultipleItems() {
-  return (
-    <div className="slider-container">
-      <Grid2 container component={Slider} {...settings} spacing={1}>
-        <Grid2>
-          <HeadCard
-            name="Sinemorets"
-            text="A timeless jewel on the coast"
-            Img={
-              <StaticImage
-                src="./../veleka-sinemorec-3.jpg"
-                alt="asd"
-                layout="fullWidth"
-              />
-            }
-          />
-        </Grid2>
-        <Grid2>
-          <HeadCard
-            name="Tsarevo"
-            text="Coastal charm meets timeless tranquility"
-            Img={
-              <StaticImage
-                src="./../carevo-drone-1.jpg"
-                alt="asd"
-                layout="fullWidth"
-              />
-            }
-          />
-        </Grid2>
-        <Grid2>
-          <HeadCard
-            name="Lozenets"
-            text="Pristine beach, vibrant nightlife by dusk"
-            Img={
-              <StaticImage
-                src="./../lozenec-long.jpg"
-                alt="asd"
-                layout="fullWidth"
-              />
-            }
-          />
-        </Grid2>
-        <Grid2>
-          <HeadCard
-            name="Ahtopol"
-            text="Where golden sunsets meet crystal waters"
-            Img={
-              <StaticImage
-                src="./../ahtopol-boat.jpg"
-                alt="asd"
-                layout="fullWidth"
-              />
-            }
-          />
-        </Grid2>
-        <Grid2>
-          <HeadCard
-            name="Varvara"
-            text="Where golden sunsets meet crystal waters"
-            Img={
-              <StaticImage
-                src="./../varvara-test.jpg"
-                alt="asd"
-                layout="fullWidth"
-              />
-            }
-          />{" "}
-        </Grid2>
-
-        <Grid2>
-          <HeadCard
-            name="Rezovo"
-            text="Where golden sunsets meet crystal waters"
-            Img={
-              <StaticImage src="./rezovo.jpg" alt="asd" layout="fullWidth" />
-            }
-          />
-        </Grid2>
-      </Grid2>
-      <Slider {...settings}></Slider>
-    </div>
-  );
-}
 
 const HeadCard = ({ name, Img, text }) => (
   <Box component={"span"}>
@@ -247,7 +160,13 @@ const IndexPage = () => {
         >
           Destinations
         </Typography>
-        <Grid2 container component={Slider} {...settings} spacing={1}>
+        <Grid2
+          container
+          component={Slider}
+          {...settings}
+          spacing={1}
+          arrows={false}
+        >
           <Grid2 xs={6} md={2}>
             <HeadCard
               name="Sinemorets"
