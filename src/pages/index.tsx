@@ -141,14 +141,13 @@ const IndexPage = () => {
           <IconButton sx={{ color: !a ? "white" : "black" }} disableRipple>
             <Menu />
           </IconButton>
-          <Typography variant="h6" sx={{ color: !a ? "white" : "black" }}>
-            <StaticImage
-              src="./../logo-visit-tsarevo.png"
-              layout="fixed"
-              width={225}
-              alt="asd"
-            />
-          </Typography>
+          <Box flex={1} />
+          <StaticImage
+            src="./../logo-visit-tsarevo.png"
+            layout="fixed"
+            width={225}
+            alt="asd"
+          />
           <Box flex={1} />
           <Button
             sx={{ color: !a ? "white" : "black" }}
@@ -165,6 +164,9 @@ const IndexPage = () => {
             src="./../test-2-cover.jpg"
             alt="asd"
             layout="fullWidth"
+            transformOptions={{
+              duotone: { opacity: 25, highlight: "#1e2329", shadow: "#1e2329" },
+            }}
           />
         </Box>
         <Box sx={{ display: { xs: "none", md: "block" } }}>
@@ -172,6 +174,9 @@ const IndexPage = () => {
             src="./../hero-plaj-3.jpg"
             alt="asd"
             layout="fullWidth"
+            transformOptions={{
+              duotone: { opacity: 25, highlight: "#1e2329", shadow: "#1e2329" },
+            }}
           />
         </Box>
         <Box
