@@ -148,6 +148,7 @@ const IndexPage = () => {
               layout="fixed"
               width={225}
               alt="asd"
+              placeholder="none"
             />
           </Box>
           <Box sx={{ display: !a ? "none" : "block" }}>
@@ -156,6 +157,7 @@ const IndexPage = () => {
               layout="fixed"
               width={225}
               alt="asd"
+              placeholder="none"
             />
           </Box>
           <Box flex={1} />
