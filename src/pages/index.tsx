@@ -213,7 +213,7 @@ const IndexPage = () => {
               color="white"
               gutterBottom
             >
-              Enjoy the beauty of Tsarevo Municipality
+              Enjoy the beauty of Tsarevo
             </Typography>
             <Typography
               paragraph
