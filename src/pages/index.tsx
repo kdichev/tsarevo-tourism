@@ -271,7 +271,13 @@ const IndexPage = () => {
         >
           Our pristine beaches
         </Typography>
-        <Grid2 container spacing={3} component={Slider} {...settings1}>
+        <Grid2
+          container
+          spacing={3}
+          component={Slider}
+          {...settings1}
+          arrows={false}
+        >
           <Grid2 xs={12} md={4}>
             <HeadCard
               name="Lozenets Central"
@@ -369,7 +375,13 @@ const IndexPage = () => {
         >
           What to do
         </Typography>
-        <Grid2 container spacing={3} component={Slider} {...settings1}>
+        <Grid2
+          container
+          spacing={3}
+          component={Slider}
+          {...settings1}
+          arrows={false}
+        >
           <Grid2 xs={12} md={4}>
             <HeadCard
               name="Sun and beach"
