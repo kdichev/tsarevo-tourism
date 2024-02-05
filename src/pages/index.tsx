@@ -29,6 +29,26 @@ const settings = {
   slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
+  nextArrow: (
+    <Box
+      sx={{ position: "absolute", top: "10%", right: "0 !important", mr: 2 }}
+    >
+      {">"}
+    </Box>
+  ),
+  prevArrow: (
+    <Box
+      sx={{
+        position: "absolute",
+        top: "10%",
+        left: "0 !important",
+        ml: 2,
+        zIndex: 1,
+      }}
+    >
+      {"<"}
+    </Box>
+  ),
   responsive: [
     {
       breakpoint: 480,
@@ -46,6 +66,26 @@ const settings1 = {
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
+  nextArrow: (
+    <Box
+      sx={{ position: "absolute", top: "10%", right: "0 !important", mr: 2 }}
+    >
+      {">"}
+    </Box>
+  ),
+  prevArrow: (
+    <Box
+      sx={{
+        position: "absolute",
+        top: "10%",
+        left: "0 !important",
+        ml: 2,
+        zIndex: 1,
+      }}
+    >
+      {"<"}
+    </Box>
+  ),
   responsive: [
     {
       breakpoint: 480,
@@ -182,7 +222,7 @@ const IndexPage = () => {
           container
           component={Slider}
           {...settings}
-          arrows={false}
+          // arrows={false}
           spacing={1}
         >
           <Grid2 xs={6} md={2}>
@@ -276,7 +316,7 @@ const IndexPage = () => {
           spacing={3}
           component={Slider}
           {...settings1}
-          arrows={false}
+          // arrows={false}
         >
           <Grid2 xs={12} md={4}>
             <HeadCard
@@ -380,7 +420,7 @@ const IndexPage = () => {
           spacing={3}
           component={Slider}
           {...settings1}
-          arrows={false}
+          // arrows={false}
         >
           <Grid2 xs={12} md={4}>
             <HeadCard
