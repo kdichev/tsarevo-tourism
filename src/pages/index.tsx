@@ -142,7 +142,12 @@ const IndexPage = () => {
             <Menu />
           </IconButton>
           <Typography variant="h6" sx={{ color: !a ? "white" : "black" }}>
-            Visit Tsarevo
+            <StaticImage
+              src="./../logo-visit-tsarevo.png"
+              layout="fixed"
+              width={225}
+              alt="asd"
+            />
           </Typography>
           <Box flex={1} />
           <Button
