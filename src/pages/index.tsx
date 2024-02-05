@@ -25,6 +25,7 @@ import "slick-carousel/slick/slick-theme.css";
 const settings = {
   infinite: true,
   speed: 500,
+  autoplaySpeed: 10000,
   slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
@@ -33,6 +34,23 @@ const settings = {
       breakpoint: 480,
       settings: {
         slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+const settings1 = {
+  infinite: true,
+  speed: 500,
+  autoplaySpeed: 10000,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
         slidesToScroll: 1,
       },
     },
@@ -164,8 +182,8 @@ const IndexPage = () => {
           container
           component={Slider}
           {...settings}
-          spacing={1}
           arrows={false}
+          spacing={1}
         >
           <Grid2 xs={6} md={2}>
             <HeadCard
@@ -253,7 +271,7 @@ const IndexPage = () => {
         >
           Our pristine beaches
         </Typography>
-        <Grid2 container spacing={3}>
+        <Grid2 container spacing={3} component={Slider} {...settings1}>
           <Grid2 xs={12} md={4}>
             <HeadCard
               name="Lozenets Central"
@@ -351,7 +369,7 @@ const IndexPage = () => {
         >
           What to do
         </Typography>
-        <Grid2 container spacing={3}>
+        <Grid2 container spacing={3} component={Slider} {...settings1}>
           <Grid2 xs={12} md={4}>
             <HeadCard
               name="Sun and beach"
