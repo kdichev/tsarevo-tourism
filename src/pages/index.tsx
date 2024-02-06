@@ -320,7 +320,7 @@ const IndexPage = () => {
             Best places to visit
           </Typography>
           <Box>
-            <Button variant="outlined" endIcon={<ArrowForward />}>
+            <Button variant="outlined" endIcon={<ArrowForward />} size="small">
               Explore more
             </Button>
           </Box>
@@ -583,7 +583,7 @@ const IndexPage = () => {
           </Grid2>
         </Grid2>
         <Box sx={{ display: "flex", justifyContent: "center", mt: 1, mb: 5 }}>
-          <Button variant="outlined" endIcon={<ArrowForward />}>
+          <Button variant="outlined" endIcon={<ArrowForward />} size="small">
             Explore more
           </Button>
         </Box>
@@ -965,10 +965,11 @@ const IndexPage = () => {
           </Grid2>
         </Grid2>
       </Container>
-      <Box
+      {/* <Box
         sx={{
           width: "100%",
-          height: "350px",
+          pt: 8,
+          pb: 8,
           backgroundColor: "primary.light",
           display: "flex",
           alignItems: "center",
@@ -978,11 +979,14 @@ const IndexPage = () => {
         <Typography
           variant="h1"
           fontWeight={"bolder"}
-          sx={{ color: "primary.contrastText" }}
+          sx={{
+            color: "primary.contrastText",
+            typography: { xs: "h2", md: "h1" },
+          }}
         >
           #VisitTsarevo
         </Typography>
-      </Box>
+      </Box> */}
       <Box
         sx={(theme) => ({
           pt: 2,
