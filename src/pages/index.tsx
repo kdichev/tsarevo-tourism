@@ -1,11 +1,14 @@
-import { Language, Menu } from "@mui/icons-material";
+import { Language, Menu, Search } from "@mui/icons-material";
 import {
   AppBar,
   Box,
   Button,
   Card,
   Container,
+  Divider,
   IconButton,
+  InputAdornment,
+  TextField,
   Toolbar,
   Typography,
   useScrollTrigger,
@@ -137,7 +140,7 @@ const IndexPage = () => {
         color={!a ? "transparent" : "default"}
         elevation={a ? undefined : 0}
       >
-        <Toolbar>
+        <Toolbar component={Container}>
           <IconButton sx={{ color: !a ? "white" : "black" }} disableRipple>
             <Menu />
           </IconButton>
@@ -192,6 +195,7 @@ const IndexPage = () => {
           />
         </Box>
         <Box
+          component={Container}
           sx={{
             position: "absolute",
             left: 0,
@@ -208,8 +212,10 @@ const IndexPage = () => {
             <Typography
               sx={{
                 textShadow: "black 1px 0 20px",
+                typography: { xs: "h3", md: "h2" },
               }}
-              variant="h3"
+              variant={"h3"}
+              fontWeight="bolder"
               color="white"
               gutterBottom
             >
@@ -227,6 +233,29 @@ const IndexPage = () => {
               Tsarevo has incredible places for you all around the municipality.
               Our fantastic destinations are ready for your visit.
             </Typography>
+            <TextField
+              variant="outlined"
+              color="primary"
+              size="small"
+              sx={{
+                background: "white",
+                borderRadius: 8,
+                maxWidth: 500,
+                display: { xs: "none", md: "flex" },
+                mb: { xs: 0, md: 4 },
+              }}
+              placeholder="Where do you want to go....?"
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <Divider orientation="vertical" />
+                    <IconButton edge="end">
+                      <Search />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
           </Box>
         </Box>
       </Box>
