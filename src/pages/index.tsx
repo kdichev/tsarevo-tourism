@@ -1,13 +1,40 @@
-import { Language, Menu, Search } from "@mui/icons-material";
+import {
+  ArrowForward,
+  CurrencyExchange,
+  Description,
+  Facebook,
+  FacebookOutlined,
+  HealthAndSafety,
+  Inbox,
+  Instagram,
+  Language,
+  Lock,
+  Menu,
+  Phone,
+  Power,
+  SafetyCheck,
+  Search,
+  Smartphone,
+  Star,
+  Translate,
+  Twitter,
+  WbSunny,
+  YouTube,
+} from "@mui/icons-material";
 import {
   AppBar,
   Box,
   Button,
   Card,
+  CardContent,
+  Chip,
   Container,
   Divider,
   IconButton,
   InputAdornment,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
   TextField,
   Toolbar,
   Typography,
@@ -195,7 +222,6 @@ const IndexPage = () => {
           />
         </Box>
         <Box
-          component={Container}
           sx={{
             position: "absolute",
             left: 0,
@@ -211,16 +237,17 @@ const IndexPage = () => {
           <Box>
             <Typography
               sx={{
-                textShadow: "black 1px 0 20px",
+                // textShadow: "black 1px 0 20px",
                 typography: { xs: "h3", md: "h2" },
+                fontWeight: "bolder !important",
               }}
-              variant={"h3"}
               fontWeight="bolder"
               color="white"
               gutterBottom
             >
               Enjoy the beauty of Tsarevo
             </Typography>
+
             <Typography
               paragraph
               variant="body1"
@@ -259,20 +286,307 @@ const IndexPage = () => {
           </Box>
         </Box>
       </Box>
-      <Container sx={{ mt: 2 }}>
+      <Container sx={{ mt: 2 }} maxWidth="md">
         <Typography
-          variant="h4"
+          variant="h3"
           gutterBottom
           fontWeight={"bolder"}
           textAlign={"center"}
           sx={{ mt: 4 }}
         >
-          Amazing places to visit
+          Have unforgettable experiences
         </Typography>
         <Typography paragraph textAlign={"center"} variant="body2">
-          Tsarevo has incredible places for you all around the municipality. Our
-          fantastic destinations are ready for your visit.
+          With its unique cuisine, rich culture, some of the most beautiful
+          beaches in the world, breathtaking waterfalls, and adventure for
+          everyone’s liking, all you have to do is choose the perfect type of
+          tourism for you and be amazed by the wonders of Tsarevo.
         </Typography>
+      </Container>
+      <Container sx={{ mt: 2 }}>
+        <Box
+          display="flex"
+          sx={{
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Typography
+            variant="h4"
+            gutterBottom
+            fontWeight={"bolder"}
+            sx={{ mt: 2 }}
+          >
+            Best places to visit
+          </Typography>
+          <Box>
+            <Button variant="outlined" endIcon={<ArrowForward />}>
+              Explore more
+            </Button>
+          </Box>
+        </Box>
+        <Grid2
+          container
+          component={Slider}
+          {...settings1}
+          // arrows={false}
+          spacing={1}
+          slidesToShow={4}
+        >
+          <Grid2 xs={6} md={2}>
+            <Card>
+              <Box sx={{ position: "relative" }}>
+                <StaticImage
+                  src="https://milenavillalba.com/wp-content/uploads/2015/10/12-Llu%C3%ADs-Bort-Photographer-Exposici%C3%B3n-en-la-Campaneta-de-Sustancia-Quemada-e1446221355678.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                />
+                <Box sx={{ position: "absolute", top: 0, right: 0, m: 1 }}>
+                  <Chip label="arts & culture" color="secondary" size="small" />
+                </Box>
+              </Box>
+              <CardContent sx={{ p: 1, pb: "8px !important" }}>
+                <Typography variant="caption">LOZENETS</Typography>
+                <Typography variant="body1">
+                  Lozenets Museum of Modern Art: Unveiling the Contemporary
+                </Typography>
+                <Box
+                  display={"flex"}
+                  justifyContent="space-between"
+                  sx={{ mt: 2, mb: 0.5 }}
+                >
+                  <Typography variant="caption">
+                    4.5 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
+                  </Typography>
+                  <Box display="flex" sx={{ alignItems: "end" }}>
+                    <Typography variant="caption">FROM</Typography>
+                    <Typography fontWeight={"bold"} sx={{ ml: 0.5 }}>
+                      19 BGN
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button fullWidth variant="contained" size="small">
+                  GET YOUR TICKETS
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid2>
+          <Grid2 xs={6} md={2}>
+            <Card>
+              <Box sx={{ position: "relative" }}>
+                <StaticImage
+                  src="https://www.sunnybeach.com/files/what_to_visit_objects/355/16045333033208.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                />
+                <Box sx={{ position: "absolute", top: 0, right: 0, m: 1 }}>
+                  <Chip label="arts & culture" color="secondary" size="small" />
+                </Box>
+              </Box>
+
+              <CardContent>
+                <Typography variant="caption">TSAREVO</Typography>
+                <Typography variant="body1">
+                  A Journey through Time at the Tsarevo Municipal Historical...
+                </Typography>
+                <Box
+                  display={"flex"}
+                  justifyContent="space-between"
+                  sx={{ mt: 1 }}
+                >
+                  <Typography variant="caption">
+                    4.5 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
+                  </Typography>
+                  <Box display="flex" sx={{ alignItems: "end" }}>
+                    <Typography variant="caption">FROM</Typography>
+                    <Typography fontWeight={"bold"} sx={{ ml: 0.5 }}>
+                      7 BGN
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button fullWidth variant="contained">
+                  GET YOUR TICKETS
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid2>
+          <Grid2 xs={6} md={2}>
+            <Card>
+              <Box sx={{ position: "relative" }}>
+                <StaticImage
+                  src="https://stock.evgenidinev.com/photo/blacksea-34823ds.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                />
+                <Box sx={{ position: "absolute", top: 0, right: 0, m: 1 }}>
+                  <Chip label="adventure" color="secondary" size="small" />
+                </Box>
+              </Box>
+              <CardContent>
+                <Typography variant="caption">SINEMORETS</Typography>
+                <Typography variant="body1">
+                  Veleka River Adventure: Unforgettable Kayaking Journey
+                </Typography>
+                <Box
+                  display={"flex"}
+                  justifyContent="space-between"
+                  sx={{ mt: 1 }}
+                >
+                  <Typography variant="caption">
+                    4.2 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
+                  </Typography>
+                  <Box display="flex" sx={{ alignItems: "end" }}>
+                    <Typography variant="caption">FROM</Typography>
+                    <Typography fontWeight={"bold"} sx={{ ml: 0.5 }}>
+                      29 BGN
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button fullWidth variant="contained">
+                  GET YOUR TICKETS
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid2>
+          <Grid2 xs={6} md={2}>
+            <Card>
+              <StaticImage
+                src="https://museumtsarevo.com/images/25_1_b.JPG"
+                alt="asd"
+                layout="fullWidth"
+              />
+              <CardContent>
+                <Typography variant="caption">AHTOPOL</Typography>
+                <Typography variant="body1">
+                  The Late Antique and Medieval Fortress Exhibition in Ahtopol
+                </Typography>
+                <Box
+                  display={"flex"}
+                  justifyContent="space-between"
+                  sx={{ mt: 1 }}
+                >
+                  <Typography variant="caption">
+                    4.2 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
+                  </Typography>
+                  <Box display="flex" sx={{ alignItems: "end" }}>
+                    <Typography variant="caption">FROM</Typography>
+                    <Typography fontWeight={"bold"} sx={{ ml: 0.5 }}>
+                      20 BGN
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button fullWidth variant="contained">
+                  GET YOUR TICKETS
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid2>
+
+          <Grid2 xs={6} md={2}>
+            <Card>
+              <StaticImage
+                src="https://www.ancient-origins.net/sites/default/files/field/image/medieval-castle.jpg"
+                alt="asd"
+                layout="fullWidth"
+              />
+              <CardContent>
+                <Typography variant="caption">BRODILOVO</Typography>
+                <Typography variant="body1">
+                  Ruler's house in Brodilovo and its history over the centuries
+                </Typography>
+                <Box
+                  display={"flex"}
+                  justifyContent="space-between"
+                  sx={{ mt: 1 }}
+                >
+                  <Typography variant="caption">
+                    4.2 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
+                  </Typography>
+                  <Box display="flex" sx={{ alignItems: "end" }}>
+                    <Typography variant="caption">FROM</Typography>
+                    <Typography fontWeight={"bold"} sx={{ ml: 0.5 }}>
+                      20 BGN
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button fullWidth variant="contained">
+                  GET YOUR TICKETS
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid2>
+          <Grid2 xs={6} md={2}>
+            <Card>
+              <StaticImage
+                src="https://museumtsarevo.com/images/11_1_b.jpg"
+                alt="asd"
+                layout="fullWidth"
+              />
+              <CardContent>
+                <Typography variant="caption">SINEMORETS</Typography>
+                <Typography variant="body1">
+                  Medieval Fortified Ruler's Residence in Sinemorets
+                </Typography>
+                <Box
+                  display={"flex"}
+                  justifyContent="space-between"
+                  sx={{ mt: 1 }}
+                >
+                  <Typography variant="caption">
+                    4.2 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
+                  </Typography>
+                  <Box display="flex" sx={{ alignItems: "end" }}>
+                    <Typography variant="caption">FROM</Typography>
+                    <Typography fontWeight={"bold"} sx={{ ml: 0.5 }}>
+                      20 BGN
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button fullWidth variant="contained">
+                  GET YOUR TICKETS
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid2>
+          <Grid2 xs={6} md={2}>
+            <Card>
+              <StaticImage
+                src="https://www.veleka.bg/wp-content/uploads/2017/04/home-bg_mini.jpg"
+                alt="asd"
+                layout="fullWidth"
+              />
+              <CardContent>
+                <Typography variant="caption">SINEMORETS</Typography>
+                <Typography variant="body1">
+                  Discover the Magic of Veleka: A Serene River Boat Adventure
+                </Typography>
+                <Box
+                  display={"flex"}
+                  justifyContent="space-between"
+                  sx={{ mt: 1 }}
+                >
+                  <Typography variant="caption">
+                    4.2 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
+                  </Typography>
+                  <Box display="flex" sx={{ alignItems: "end" }}>
+                    <Typography variant="caption">FROM</Typography>
+                    <Typography fontWeight={"bold"} sx={{ ml: 0.5 }}>
+                      20 BGN
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button fullWidth variant="contained">
+                  GET YOUR TICKETS
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid2>
+        </Grid2>
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 1, mb: 5 }}>
+          <Button variant="outlined" endIcon={<ArrowForward />}>
+            Explore more
+          </Button>
+        </Box>
         <Typography
           variant="h4"
           gutterBottom
@@ -570,7 +884,145 @@ const IndexPage = () => {
             />
           </Grid2>
         </Grid2>
+        <Typography
+          variant="h4"
+          gutterBottom
+          fontWeight={"bolder"}
+          textAlign={"center"}
+          sx={{ mt: 4 }}
+        >
+          Traveling around Tsarevo
+        </Typography>
+        <Typography textAlign={"center"} sx={{ mb: 4 }}>
+          All the necessary information for your trip around Brazil is here.
+        </Typography>
+        <Grid2 container spacing={2} sx={{ mb: 4 }}>
+          <Grid2 md={4}>
+            <ListItemButton>
+              <ListItemIcon>
+                <HealthAndSafety color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Health" />
+            </ListItemButton>
+            <Divider />
+            <ListItemButton>
+              <ListItemIcon>
+                <Lock color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Safety" />
+            </ListItemButton>
+            <Divider />
+            <ListItemButton>
+              <ListItemIcon>
+                <Description color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Visa and Travel Papers" />
+            </ListItemButton>
+          </Grid2>
+          <Grid2 md={4}>
+            <ListItemButton>
+              <ListItemIcon>
+                <Phone color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Emergency Numbers" />
+            </ListItemButton>
+            <Divider />
+            <ListItemButton>
+              <ListItemIcon>
+                <Power color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Power" />
+            </ListItemButton>
+            <Divider />
+            <ListItemButton>
+              <ListItemIcon>
+                <WbSunny color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Local Weather" />
+            </ListItemButton>
+          </Grid2>
+          <Grid2 md={4}>
+            <ListItemButton>
+              <ListItemIcon>
+                <Smartphone color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Telecommunications" />
+            </ListItemButton>
+            <Divider />
+            <ListItemButton>
+              <ListItemIcon>
+                <Translate color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Language" />
+            </ListItemButton>
+            <Divider />
+            <ListItemButton>
+              <ListItemIcon>
+                <CurrencyExchange color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Currency" />
+            </ListItemButton>
+          </Grid2>
+        </Grid2>
       </Container>
+      <Box
+        sx={{
+          width: "100%",
+          height: "350px",
+          backgroundColor: "primary.light",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Typography
+          variant="h1"
+          fontWeight={"bolder"}
+          sx={{ color: "primary.contrastText" }}
+        >
+          #VisitTsarevo
+        </Typography>
+      </Box>
+      <Box
+        sx={(theme) => ({
+          pt: 2,
+          pb: 2,
+        })}
+      >
+        <Container>
+          <Grid2 container>
+            <Grid2 xs={12} md={4}>
+              <StaticImage
+                src="./../logo-black.png"
+                layout="fixed"
+                width={225}
+                alt="asd"
+                placeholder="none"
+              />
+              <Box display="flex" mt={1} mb={1}>
+                <Box>
+                  <FacebookOutlined />
+                </Box>
+                <Box ml={1}>
+                  <Instagram />
+                </Box>
+                <Box ml={1}>
+                  <YouTube />
+                </Box>
+                <Box ml={1}>
+                  {" "}
+                  <Twitter />
+                </Box>
+              </Box>
+              <Typography variant="body2">
+                Visit Tsarevo is the first independent promoting channel for
+                Tsarevo in the world. Discover great holiday ideas for family
+                holidays, weekends away, short breaks and days out in Tsarevo.
+              </Typography>
+            </Grid2>
+          </Grid2>
+        </Container>
+      </Box>
     </>
   );
 };
