@@ -288,7 +288,7 @@ const IndexPage = () => {
       </Box>
       <Container sx={{ mt: 2 }} maxWidth="md">
         <Typography
-          variant="h3"
+          variant="h4"
           gutterBottom
           fontWeight={"bolder"}
           textAlign={"center"}
@@ -319,7 +319,7 @@ const IndexPage = () => {
           >
             Best places to visit
           </Typography>
-          <Box>
+          <Box sx={{ display: { lg: "block", xs: "none" } }}>
             <Button variant="outlined" endIcon={<ArrowForward />} size="small">
               Explore more
             </Button>
@@ -345,7 +345,7 @@ const IndexPage = () => {
                   <Chip label="arts & culture" color="secondary" size="small" />
                 </Box>
               </Box>
-              <CardContent sx={{ p: 1, pb: "8px !important" }}>
+              <CardContent>
                 <Typography variant="caption">LOZENETS</Typography>
                 <Typography variant="body1">
                   Lozenets Museum of Modern Art: Unveiling the Contemporary
@@ -365,7 +365,7 @@ const IndexPage = () => {
                     </Typography>
                   </Box>
                 </Box>
-                <Button fullWidth variant="contained" size="small">
+                <Button fullWidth variant="contained">
                   GET YOUR TICKETS
                 </Button>
               </CardContent>
@@ -582,8 +582,15 @@ const IndexPage = () => {
             </Card>
           </Grid2>
         </Grid2>
-        <Box sx={{ display: "flex", justifyContent: "center", mt: 1, mb: 5 }}>
-          <Button variant="outlined" endIcon={<ArrowForward />} size="small">
+        <Box
+          sx={{
+            display: { lg: "none", xs: "flex" },
+            justifyContent: "center",
+            mb: 3,
+            mt: 2,
+          }}
+        >
+          <Button variant="outlined" endIcon={<ArrowForward />} fullWidth>
             Explore more
           </Button>
         </Box>
