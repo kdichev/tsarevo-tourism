@@ -296,7 +296,12 @@ const IndexPage = () => {
         >
           Have unforgettable experiences
         </Typography>
-        <Typography paragraph textAlign={"center"} variant="body2">
+        <Typography
+          paragraph
+          textAlign={"center"}
+          variant="body2"
+          sx={{ fontSize: 18 }}
+        >
           With its unique cuisine, rich culture, some of the most beautiful
           beaches in the world, breathtaking waterfalls, and adventure for
           everyone’s liking, all you have to do is choose the perfect type of
@@ -305,6 +310,39 @@ const IndexPage = () => {
       </Container>
 
       <Container sx={{ mt: 2 }}>
+        <Grid2 container spacing={4}>
+          <Grid2 xl={6} xs={12}>
+            <Card>
+              <StaticImage
+                src="https://as2.ftcdn.net/v2/jpg/02/79/08/53/1000_F_279085351_pHDUnRXTeCKo1pWxNo3IBa06qwGvUrU9.jpg"
+                alt="asd"
+                layout="fullWidth"
+                transformOptions={{
+                  duotone: {
+                    opacity: 25,
+                    highlight: "#1e2329",
+                    shadow: "#1e2329",
+                  },
+                }}
+              />
+            </Card>
+          </Grid2>
+          <Grid2 xl={6} xs={12}>
+            <Typography variant="h4" gutterBottom fontWeight={"bolder"}>
+              Dive into Bliss: Tsarevo's Summer Beach Season Beckons!
+            </Typography>
+            <Typography sx={{ fontSize: 18 }}>
+              Embrace the allure of Tsarevo's sun-kissed shores this summer!
+              With pristine beaches stretching along the Black Sea coastline,
+              Tsarevo offers an unforgettable escape for beach enthusiasts. Dive
+              into crystal-clear waters, bask in the warmth of the golden sun,
+              and unwind amidst breathtaking scenery.
+            </Typography>
+            <Button size="large" variant="outlined" sx={{ mt: 2 }}>
+              READ MORE
+            </Button>
+          </Grid2>
+        </Grid2>
         <Box
           display="flex"
           sx={{
@@ -313,7 +351,7 @@ const IndexPage = () => {
           }}
         >
           <Typography
-            variant="h4"
+            variant="h5"
             gutterBottom
             fontWeight={"bolder"}
             sx={{ mt: 2 }}
@@ -354,7 +392,7 @@ const IndexPage = () => {
                 <Box
                   display={"flex"}
                   justifyContent="space-between"
-                  sx={{ mt: 2, mb: 0.5 }}
+                  sx={{ mt: 1 }}
                 >
                   <Typography variant="caption">
                     4.5 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
@@ -452,6 +490,39 @@ const IndexPage = () => {
           <Grid2 xs={6} md={2}>
             <Card>
               <StaticImage
+                src="./../brodilovo-razkopki.jpg"
+                alt="asd"
+                layout="fullWidth"
+              />
+              <CardContent>
+                <Typography variant="caption">BRODILOVO</Typography>
+                <Typography variant="body1">
+                  Ruler's house in Brodilovo and its history over the centuries
+                </Typography>
+                <Box
+                  display={"flex"}
+                  justifyContent="space-between"
+                  sx={{ mt: 1 }}
+                >
+                  <Typography variant="caption">
+                    4.2 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
+                  </Typography>
+                  <Box display="flex" sx={{ alignItems: "end" }}>
+                    <Typography variant="caption">FROM</Typography>
+                    <Typography fontWeight={"bold"} sx={{ ml: 0.5 }}>
+                      20 BGN
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button fullWidth variant="contained">
+                  GET YOUR TICKETS
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid2>
+          {/* <Grid2 xs={6} md={2}>
+            <Card>
+              <StaticImage
                 src="https://museumtsarevo.com/images/25_1_b.JPG"
                 alt="asd"
                 layout="fullWidth"
@@ -483,39 +554,6 @@ const IndexPage = () => {
             </Card>
           </Grid2>
 
-          <Grid2 xs={6} md={2}>
-            <Card>
-              <StaticImage
-                src="https://www.ancient-origins.net/sites/default/files/field/image/medieval-castle.jpg"
-                alt="asd"
-                layout="fullWidth"
-              />
-              <CardContent>
-                <Typography variant="caption">BRODILOVO</Typography>
-                <Typography variant="body1">
-                  Ruler's house in Brodilovo and its history over the centuries
-                </Typography>
-                <Box
-                  display={"flex"}
-                  justifyContent="space-between"
-                  sx={{ mt: 1 }}
-                >
-                  <Typography variant="caption">
-                    4.2 <Star fontSize={"inherit"} sx={{ color: "orange" }} />
-                  </Typography>
-                  <Box display="flex" sx={{ alignItems: "end" }}>
-                    <Typography variant="caption">FROM</Typography>
-                    <Typography fontWeight={"bold"} sx={{ ml: 0.5 }}>
-                      20 BGN
-                    </Typography>
-                  </Box>
-                </Box>
-                <Button fullWidth variant="contained">
-                  GET YOUR TICKETS
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid2>
           <Grid2 xs={6} md={2}>
             <Card>
               <StaticImage
@@ -581,7 +619,7 @@ const IndexPage = () => {
                 </Button>
               </CardContent>
             </Card>
-          </Grid2>
+          </Grid2> */}
         </Grid2>
         <Box
           sx={{
@@ -597,7 +635,7 @@ const IndexPage = () => {
         </Box>
 
         <Typography
-          variant="h4"
+          variant="h5"
           gutterBottom
           fontWeight={"bolder"}
           sx={{ mt: 2 }}
@@ -795,7 +833,7 @@ const IndexPage = () => {
         </Box>
 
         <Typography
-          variant="h4"
+          variant="h5"
           gutterBottom
           fontWeight={"bolder"}
           sx={{ mt: 2 }}
@@ -896,7 +934,7 @@ const IndexPage = () => {
         </Grid2>
         <Container sx={{ mt: 2 }}>
           <Grid2 container spacing={4}>
-            <Grid2 xl={6}>
+            <Grid2 xl={6} xs={12}>
               <Card>
                 <StaticImage
                   src="./../nestinari-promo.jpg"
