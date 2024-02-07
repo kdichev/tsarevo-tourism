@@ -97,7 +97,7 @@ const settings = {
 const settings1 = {
   infinite: true,
   speed: 500,
-  autoplaySpeed: 10000,
+  autoplaySpeed: 12000,
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
@@ -303,6 +303,7 @@ const IndexPage = () => {
           tourism for you and be amazed by the wonders of Tsarevo.
         </Typography>
       </Container>
+
       <Container sx={{ mt: 2 }}>
         <Box
           display="flex"
@@ -594,6 +595,7 @@ const IndexPage = () => {
             Explore more
           </Button>
         </Box>
+
         <Typography
           variant="h4"
           gutterBottom
@@ -687,8 +689,9 @@ const IndexPage = () => {
         <Box sx={{ display: "flex", justifyContent: "center", mt: 1, mb: 5 }}>
           <Button variant="outlined">All destiantions</Button>
         </Box>
+
         <Typography
-          variant="h4"
+          variant="h5"
           gutterBottom
           fontWeight={"bolder"}
           sx={{ mt: 2 }}
@@ -891,6 +894,39 @@ const IndexPage = () => {
             />
           </Grid2>
         </Grid2>
+        <Container sx={{ mt: 2 }}>
+          <Grid2 container spacing={4}>
+            <Grid2 xl={6}>
+              <Card>
+                <StaticImage
+                  src="./../nestinari-promo.jpg"
+                  alt="asd"
+                  layout="fullWidth"
+                  transformOptions={{
+                    duotone: {
+                      opacity: 25,
+                      highlight: "#1e2329",
+                      shadow: "#1e2329",
+                    },
+                  }}
+                />
+              </Card>
+            </Grid2>
+            <Grid2 xl={6}>
+              <Typography variant="h4" gutterBottom fontWeight={"bolder"}>
+                Discover Bulgari's traditional Nestinari culture and way of life
+              </Typography>
+              <Typography sx={{ fontSize: 18 }}>
+                Step into the mesmerizing world of Bulgarian culture with our
+                exclusive Nestinari Tradition experience in the quaint village
+                of Bulgari!
+              </Typography>
+              <Button size="large" variant="outlined" sx={{ mt: 2 }}>
+                READ MORE
+              </Button>
+            </Grid2>
+          </Grid2>
+        </Container>
         <Typography
           variant="h4"
           gutterBottom
@@ -972,6 +1008,7 @@ const IndexPage = () => {
           </Grid2>
         </Grid2>
       </Container>
+
       {/* <Box
         sx={{
           width: "100%",
